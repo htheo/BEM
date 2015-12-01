@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+/* BEM   */
+/* parametre */
+/* animation */
+/* nav menu */
+
+/* parametre */
+body,div,img,ul {
+  margin: 0;
+  border:0;
+  padding: 0;
+
+
+
+}
+html,body {
+  width: 100%;
+  height: 100%;
+}
+body {padding-top: 5%;}
+a {
+  text-decoration: none;
+}
+.role {
+
+  display:none;
+}
+/* animation */
+
+/* nav  menu  */
+.logo {
+  width: 5%;
+  z-index: 20;
+  position: fixed;
+  top: 2%;
+  right: 5%;
+}
+.logo img {
+  width: 100%;
+}
+nav {
+  background-color: rgba(0,0,0,0.9);
+  position: fixed;
+  top:0;
+  width: 100%;
+  text-align: center;
+}
+  li,a {
+    display: inline-block;
+    color: white;
+
+    transition-duration:1s;
+  }
+  li{
+    font-size: 1.2em;
+    padding: 1.5%;
+  }
+    li:hover {
+      background-color: rgba(240,240,240,0.2);
+
+    }
+    li:hover a{
+      color: orange;
+    }
+  .sousmenu {
+    background-color: rgba(10,10,10,0.9);
+
+  }
+    .sousmenu li {
+      font-size: 1em;
+      padding-top: 0.5%;
+      padding-bottom: 0.5%;
+    }
+.content {
+  margin-top: 5em;
+}
+
+
+/*  Inscription  */
+
+#fournisseur{
+  display: none;
+}
+
+
+/*  tablette   */
+/* portable */
+
