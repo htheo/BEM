@@ -2,8 +2,6 @@
 
 
 
-<body>
-
 
 <div class="content">
 
