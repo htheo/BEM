@@ -97,7 +97,7 @@ h2 {
     width: 30%;
     float: left; }
 
-#client input {
+.form_inscription input {
   display: block;
   margin: 15px 0 20px 15px;
   width: 75%;
@@ -107,7 +107,7 @@ h2 {
   font-weight: 300;
   background: #eeeeee;
   padding: 6px; }
-  #client input .form-input p::first-letter {
+  .form_inscription input .form-input p::first-letter {
     text-transform: uppercase; }
 
 .footer {
