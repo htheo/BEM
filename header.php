@@ -34,6 +34,7 @@
 	<!-- Open Graph-->
 	<meta property="og:image" content="images/bem.png">
 	<meta property="og:title" content="Bourse Echange et Matériaux">
+	<meta property="og:image" content="images/BEM.png">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="www.bem.fr">
 	<meta property="og:site_name" content="Bourse Echange et Matériaux">
@@ -74,14 +75,14 @@
 	<div class="sousmenu">
 
 		<ul>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
+			<li><a href="materiaux/sables.php">Sables</a></li>
+			<li><a href="materiaux/argiles.php">Argiles</a></li>
+			<li><a href="materiaux/limons.php">Limons</a></li>
+			<li><a href="materiaux/marnes.php">Marnes</a></li>
+			<li><a href="materiaux/calcaires.php">Calcaires</a></li>
+			<li><a href="materiaux/craies.php">Craies</a></li>
+			<li><a href="materiaux/roches_argileuses.php">Roches argileuses</a></li>
+			<li><a href="materiaux/">Autres</a></li>
 
 		</ul>
 

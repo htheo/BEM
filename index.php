@@ -1,7 +1,12 @@
 <?php require('header.php'); ?>
 
 
+
+<body>
+
+
 <div class="content">
+
 
 	<div class="slider">
 		<div class="container">
