@@ -30,18 +30,13 @@
 
 </script>
 
-<div class='content'>
+<div class=''>
 
-		<div class="inscription">
-			<a href="" onclick="client();return false">Inscription client</a>
-		</div>
-		<div class="inscription">
-			<a href="" onclick="fournisseur();return false">Inscription fournisseur</a>
-		</div>
+
 
 	<div id="client">
 		<form method="POST" action="insert_user.php">
-			<h2>- Inscription Client -</h2>
+			<h2>Inscription Client</h2>
 					<div class="form-input">
 							
 						<p>Entreprise/pseudo : <input type="text" name="pseudo" pattern="[a-zA-Z0-9]+" placeholder="Votre nom" required ></p>
@@ -83,19 +78,23 @@
 
 						<input type="number" name="role" value="4">
 
-					</div> 
-						
-						
-						
-						
+					</div>
 
-		
-		
-		
-		
 			<input class ="btn"type="submit"></br></br>
-		</form>
+			</form>
+
 	</div>
+
+
+	<div class="inscription">
+		<a href="" onclick="client();return false">Inscription client</a>
+	</div>
+	<div class="inscription">
+		<a href="" onclick="fournisseur();return false">Inscription fournisseur</a>
+	</div>
+
+
+
 	<div id="fournisseur">
 		<form method="POST" action="insert_user.php">
 			<h2>- Inscription entreprise -</h2>
@@ -154,6 +153,3 @@
 	</div>
 </div>
 
-
-</body>
-</html>

@@ -8,7 +8,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
 
 	<meta name="viewport" content="width=device-width" />
-	<link rel="icon" type="image/png" href="images/BEM.png" />
+	<link rel="icon" type="image/png" href="images/bem.png" />
 	<meta name="DC.title" content="Bourse Echange et Matériaux">
 	<meta name="DC.creator" content="Theo Hinfray">
 	<meta name="DC.subject" content="Bourse échange et matériaux (BEM) permets aux entreprises de trouver en ligne des matériaux bon marché proche" />
@@ -27,11 +27,12 @@
 	<meta name="keywords" content="BEM, Bourse, echange, materiaux, materiau, bourse d'échange de materiaux, chantier, btp, en ligne, boursomat, proximité, proche">
 	<meta name="author" content="Theo Hinfray">
 	<meta name="robots" content="index">
-	<meta name="Indentifier-URL" content="www.cinepulv.fr">
+	<meta name="Indentifier-URL" content="www.bem.fr">
 	<!-- END Référencement -->
 
 
 	<!-- Open Graph-->
+	<meta property="og:image" content="images/bem.png">
 	<meta property="og:title" content="Bourse Echange et Matériaux">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="www.bem.fr">
