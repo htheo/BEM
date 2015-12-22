@@ -3,8 +3,6 @@ require('header.php'); ?>
 
 
 
-<body>
-
 
 <div class="content">
 
