@@ -1,6 +1,11 @@
 <?php
 
+
 	session_start();
+	
+
+//	session_start();
+
 
 	$dbname = "archi";
 	$host = "localhost";
