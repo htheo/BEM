@@ -1,8 +1,8 @@
-
 <html>
+<head>
 	<head>
 
-		<title>Bourse Echange et Matériaux</title>
+		<title>Bourse Echange et Matériaux - Nos partenaires</title>
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
 
 		<meta name="viewport" content="width=device-width" />
@@ -37,11 +37,9 @@
 		<meta property="og:description" content="Bourse échange et matériaux (BEM) permets aux entreprises de trouver en ligne des matériaux bon marché proche">
 
 	</head>
-
-
-	<body class="materiaux">
-		<div class="logo"><img src="../images/logo.png" alt="logo BEM bourse d'échange et matériaux"></div>
-<nav>
+</head>
+<body>
+	<nav>
 
 				
 			<ul>
@@ -53,14 +51,14 @@
 					if (empty($_SESSION["name"])) {
 						echo '<li><a value="Accueil" href="../index.php"><span>Accueil</span></a></li>';
 						echo '<li><a value="Contact" href="#">Matériaux</a></li>';
-						echo '<li><a value="Bars" href="../partenaires.php">Nos partenaires</a></li>';
+						echo '<li><a value="Bars" href="../partenaires/">Nos partenaires</a></li>';
 						echo '<li><a  value="Se connecter" href="../connection.php"><span>Se connecter</span></a></li>';
 						echo '<li><a  value="inscription" href="../inscription.php"><span>Inscription</span> </a></li>';
 
 					}else{
 						echo '<li><a value="Accueil" href="index.php">Accueil</a></li>';
 						echo '<li><a value="Contact" href="#">Matériaux</a></li>';
-						echo '<li><a value="Bars" href="../partenaires.php">Nos partenaires</a></li>';
+						echo '<li><a value="Bars" href="../partenaires/">Nos partenaires</a></li>';
 						echo '<li><a value="deconnection" href="../deconnection.php">se déconnecter</a></li>';
 						echo '<li><a href="../single_user.php">'.$_SESSION["name"].'</a></li>';
 					}
@@ -83,19 +81,29 @@
 
 	</div>
 </nav>
-<div class="content">
-			<li><a href="deblais.php">Deblais</a></li>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
-	
 
+<div class="content">
+	<?php
+		$sql="SELECT * FROM users WHERE role = 3";
+		$req = $db->prepare($sql);
+		$req->execute();
+		  
+		$result = $req->fetchAll(PDO::FETCH_ASSOC);
+
+		foreach($result as $val){
+			echo $val['pseudo']."<br>";
+			echo "prix : ".$val['mail']." euros <br>";
+			echo "adresse : ".$val['adresse']." ".$val['ville']."<br>";
+			?>
+			<a href="single.php?entreprise=<?php echo $val['ID']; ?>">En Savoir plus</a><br><br>
+
+			<?php
+			
+
+			
+		
+	}?>
 </div>
 
-		
-	</body>
+</body>
 </html>
