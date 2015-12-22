@@ -1,7 +1,7 @@
 <?php
 
 	session_start();
-
+	
 	$dbname = "archi";
 	$host = "localhost";
 	$user = "root";

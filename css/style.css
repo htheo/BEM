@@ -1,9 +1,21 @@
 @charset "UTF-8";
 
 /* BEM   */
+
+
 /* parametre */
 /* animation */
+
+
 /* nav menu */
+/* inscription */
+/* materiaux */
+
+
+/* tablette */
+
+
+/* portable */
 
 /* parametre */
 body,div,img,ul {
@@ -19,7 +31,7 @@ html,body {
   height: 100%;
 }
 body {padding-top: 5%;}
-a {
+nav a {
   text-decoration: none;
 }
 .role {
@@ -46,7 +58,7 @@ nav {
   width: 100%;
   text-align: center;
 }
-  li,a {
+  nav li,nav a {
     display: inline-block;
     color: white;
 
@@ -82,8 +94,11 @@ nav {
 #fournisseur{
   display: none;
 }
+/*  Materiaux */
 
-
+.materiaux {
+  text-align: center;
+}
 /*  tablette   */
 /* portable */
 

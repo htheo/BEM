@@ -31,6 +31,7 @@
 
 		<!-- Open Graph-->
 		<meta property="og:title" content="Bourse Echange et Matériaux">
+		<meta property="og:image" content="images/BEM.png">
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="www.cinepulv.fr">
 		<meta property="og:site_name" content="Bourse Echange et Matériaux">
@@ -53,14 +54,14 @@
 					if (empty($_SESSION["name"])) {
 						echo '<li><a value="Accueil" href="index.php"><span>Accueil</span></a></li>';
 						echo '<li><a value="Contact" href="materiaux/">Matériaux</a></li>';
-						echo '<li><a value="Bars" href="partenaires.php">Nos partenaires</a></li>';
+						echo '<li><a value="Bars" href="partenaires/">Nos partenaires</a></li>';
 						echo '<li><a  value="Se connecter" href="connection.php"><span>Se connecter</span></a></li>';
 						echo '<li><a  value="inscription" href="inscription.php"><span>Inscription</span> </a></li>';
 
 					}else{
 						echo '<li><a value="Accueil" href="index.php">Accueil</a></li>';
 						echo '<li><a value="Contact" href="materiaux/">Matériaux</a></li>';
-						echo '<li><a value="Bars" href="partenaires.php">Nos partenaires</a></li>';
+						echo '<li><a value="Bars" href="partenaires/">Nos partenaires</a></li>';
 						echo '<li><a value="deconnection" href="deconnection.php">se déconnecter</a></li>';
 						echo '<li><a href="single_user.php">'.$_SESSION["name"].'</a></li>';
 					}
@@ -70,14 +71,14 @@
 	<div class="sousmenu">
 
 		<ul>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
-			<li><a href="">Materiaux</a></li>
+			<li><a href="materiaux/sables.php">Sables</a></li>
+			<li><a href="materiaux/argiles.php">Argiles</a></li>
+			<li><a href="materiaux/limons.php">Limons</a></li>
+			<li><a href="materiaux/marnes.php">Marnes</a></li>
+			<li><a href="materiaux/calcaires.php">Calcaires</a></li>
+			<li><a href="materiaux/craies.php">Craies</a></li>
+			<li><a href="materiaux/roches_argileuses.php">Roches argileuses</a></li>
+			<li><a href="materiaux/">Autres</a></li>
 
 		</ul>
 
