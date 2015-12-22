@@ -8,6 +8,11 @@
 
 		<input type="radio" name="tri" value="ID">Par ID
 		
+		<h2>sous classe :</h2>
+	    <input type="radio" name="sousclasse" value="Dur" checked>Dur
+
+		<input type="radio" name="sousclasse" value="Mou">Mou
+		
 		<input class ="btn"type="submit"></br></br>
 	</form>
 
@@ -17,10 +22,16 @@
 
 	include('function.php');
 	
-	if (isset($_GET['tri'])) // On a le nom et le prénom
+	if (isset($_GET['tri']) && isset($_GET['sousclasse'])) // On a le nom et le prénom
 	{
 		$tri=$_GET['tri'];
-		$sql="SELECT * FROM materiaux WHERE type = 'Sables'  ORDER BY " . $tri;
+		$sousclasse=$_GET['sousclasse'];
+		$sql="SELECT * FROM materiaux WHERE type = 'Sables' AND soustype = '" . $sousclasse . "' ORDER BY " . $tri;
+	}
+	elseif (isset($_GET['tri']))
+	{
+		$tri=$_GET['tri'];
+		$sql="SELECT * FROM materiaux WHERE type = 'Sables' ORDER BY " . $tri;
 	}
 	else // Il manque des paramètres, on avertit le visiteur
 	{
