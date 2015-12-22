@@ -4,14 +4,23 @@
 	
 	<form action="Sables.php" method="get">
 		<h2>trier par :</h2>
-	    <input type="radio" name="tri" value="prix" checked>Par prix
+		<select name="tri" class="autosubmit">
+			<option value="prix">Par Prix</option>
+			<option value="ID">Par ID</option>
 
-		<input type="radio" name="tri" value="ID">Par ID
+		</select>
+	    
 		
 		<h2>sous classe :</h2>
-	    <input type="radio" name="sousclasse" value="Dur" checked>Dur
+		<select name="sousclasse" class="autosubmit">
+			<option value="Argileux">Argileux</option>
+			<option value="Silteux">Silteux</option>
+			<option value="Alluvionnaires">Alluvionnaires</option>
+			<option value="Dune">De Dune</option>
 
-		<input type="radio" name="sousclasse" value="Mou">Mou
+		</select>
+	    
+
 		
 		<input class ="btn"type="submit"></br></br>
 	</form>
