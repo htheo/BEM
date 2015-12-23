@@ -7,7 +7,7 @@ if (empty($_SESSION["name"])) {
 if (empty($_SESSION["role"])) {
 	header("Location: erreur_acces.php");
 }
-if ($_SESSION["role"]<=2) {
+if ($_SESSION["role"]>2) {
 	header("Location: erreur_acces.php");
 }
 
@@ -15,11 +15,11 @@ if ($_SESSION["role"]<=2) {
 ?>
 
 <h1>Bienvenue Théo Hinfray</h1>
-<h2>Menu de modification des annonces</h2>
+<h2>Menu de modification des users</h2>
 <?php 
 
 
-		$sql="SELECT * FROM materiaux";
+		$sql="SELECT * FROM users";
 	
 
 	  
@@ -29,18 +29,20 @@ if ($_SESSION["role"]<=2) {
 		$result = $req->fetchAll(PDO::FETCH_ASSOC);
 
 		foreach($result as $val){
-			echo $val['type']."<br>";
-			echo "prix : ".$val['prix']." euros <br>";
+			echo $val['pseudo']."<br>";
+			echo "mail : ".$val['mail']." euros <br>";
 			echo "adresse : ".$val['adresse']." ".$val['ville']."<br>";
 			?>
-			<a href="modif_annonce.php?annonce=<?php echo $val['ID']; ?>">Voir/Modifier l'annonce</a><br><br>
-
+			<a href="#">Lien vers le site de l'entreprise</a><br><br>
+			<a href="modif_entreprise.php?entreprise=<?php echo $val['ID']; ?>">Voir/Modifier l'entreprise</a><br><br>
 			<?php
 			
 
 			
 		
 	}?>
+			
+
 	
 
 </body>

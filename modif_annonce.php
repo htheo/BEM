@@ -35,7 +35,7 @@ if ($_SESSION["role"]>2) {
 		 ?>
 	
 			<a href="modif_annonce.php?annonce=<?php echo $val['ID']; ?>">Voir/Modifier l'annonce</a><br><br>
-			<a href="partenaires/single.php?entreprise=<?php echo $val['ID']; ?>">Voir/Modifier l'entreprise qui à publier l'annonce</a><br><br>
+			<a href="modif_entreprise.php?entreprise=<?php echo $val['ID']; ?>">Voir/Modifier l'entreprise qui à publier l'annonce</a><br><br>
 
 			<?php
 			
