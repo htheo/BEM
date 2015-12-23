@@ -65,8 +65,6 @@
 			echo '<li><a value="Accueil" href="index.php">Accueil</a></li>';
 			echo '<li><a value="Contact" href="materiaux/">Matériaux</a></li>';
 			echo '<li><a value="Bars" href="partenaires.php">Nos partenaires</a></li>';
-			echo '<li><a value="deconnection" href="deconnection.php">Se déconnecter</a></li>';
-			echo '<li><a value="Bars" href="partenaires/">Nos partenaires</a></li>';
 			echo '<li><a value="deconnection" href="deconnection.php">se déconnecter</a></li>';
 			echo '<li><a href="single_user.php">'.$_SESSION["name"].'</a></li>';
 		}

@@ -2,11 +2,24 @@
 
 <div class="content">
 	
-	<form action="machefers.php" method="get">
+	<form action="Sables.php" method="get">
 		<h2>trier par :</h2>
-	    <input type="radio" name="tri" value="prix" checked>Par prix
+		<select name="tri" class="autosubmit">
+			<option value="prix">Par Prix</option>
+			<option value="ID">Par ID</option>
 
-		<input type="radio" name="tri" value="ID">Par ID
+		</select>
+	    
+		
+		<h2>sous classe :</h2>
+		<select name="sousclasse" class="autosubmit">
+			<option value="Neutralise">Grossier neutralisé à la chaux</option>
+			<option value="Non_neutralise">Fin ou grossier non neutralisé</option>
+			
+
+		</select>
+	    
+
 		
 		<input class ="btn"type="submit"></br></br>
 	</form>
@@ -17,16 +30,23 @@
 
 	include('function.php');
 	
-	if (isset($_GET['tri'])) // On a le nom et le prénom
+	if (isset($_GET['tri']) && isset($_GET['sousclasse'])) // On a le nom et le prénom
 	{
 		$tri=$_GET['tri'];
-		$sql="SELECT * FROM materiaux WHERE type = 'machefers'  ORDER BY " . $tri;
+		$sousclasse=$_GET['sousclasse'];
+		$sql="SELECT * FROM materiaux WHERE type = 'machefers' AND soustype = '" . $sousclasse . "' ORDER BY " . $tri;
+	}
+	elseif (isset($_GET['tri']))
+	{
+		$tri=$_GET['tri'];
+		$sql="SELECT * FROM materiaux WHERE type = 'machefers' ORDER BY " . $tri;
 	}
 	else // Il manque des paramètres, on avertit le visiteur
 	{
 		$tri = 'prix';
 		$sql="SELECT * FROM materiaux WHERE type = 'machefers'  ORDER BY " . $tri;
 	}
+
 
 		
 		
