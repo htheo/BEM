@@ -21,7 +21,7 @@ include('/materiaux/function.php');?>
 			<h2>Articles populaires</h2>
 			<form action="index.php" method="get" class="recherche">
 				<?php 
-					if(isset($_SESSION['ville'])&isset($_SESSION['adresse'])&$_GET['ville']=!"1"&$_GET['adresse']=!"1"){
+					if(isset($_SESSION['ville'])&isset($_SESSION['adresse'])&$_GET['ville']!="1"&$_GET['adresse']!="1"){
 						$ville=$_SESSION['ville'];
 						$adresse=$_SESSION['adresse'];
 						?>

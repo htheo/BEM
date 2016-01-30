@@ -21,7 +21,7 @@ if (empty($_SESSION["name"])) {
 if (empty($_SESSION["role"])) {
 	header("Location: erreur_acces.php");
 }
-if ($_SESSION["role"]=!3) {
+if ($_SESSION["role"]!=3) {
 	header("Location: erreur_acces.php");
 }
 

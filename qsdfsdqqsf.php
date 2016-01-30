@@ -6,7 +6,7 @@ if (empty($_SESSION["name"])) {
 if (empty($_SESSION["role"])) {
 	header("Location: erreur_acces.php");
 }
-if ($_SESSION["admin"]=!2) {
+if ($_SESSION["admin"]!=2) {
 	header("Location: erreur_acces.php");
 }
 
