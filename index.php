@@ -37,7 +37,7 @@ include('/materiaux/function.php');?>
 				?>
 				
 				<p> dans un rayon de </p>
-				<input class="input_recherche" type="number" name="range" value="50" class="form_number"><p> km</p><br>
+				<input class="input_recherche form_number" type="number" name="range" value="50" ><p> km</p><br>
 				<SELECT class="input_recherche" name="type" size="1" required>
 					<OPTION value="all">Type de matériaux</option>
 					<OPTION value="Sable">Sable</option>
@@ -178,7 +178,7 @@ include('/materiaux/function.php');?>
 			if(empty($_SESSION['name'])){
 				include ('inscription_field.php');
 			}else{
-				?> <h2>Bonjour à vous <?php echo $_SESSION['name'];  ?></h2>
+				?> <h2>Bonjour à vous <?php echo $_SESSION['name'];echo $_SESSION['role'];  ?></h2>
 
 				<a class="marg_top" href="single_user.php">Accéder à votre compte</a>
 				<?php 

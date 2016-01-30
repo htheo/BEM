@@ -268,9 +268,7 @@ h2 {
 .recherche p, .recherche input {
   display: inline-block;
 }
-.form_number {
-  width: 60px;
-}
+
 .input_recherche {
   border-radius: 2px;
   border: none;
@@ -280,6 +278,9 @@ h2 {
   padding: 6px; }
   .recherche input .form-input p::first-letter {
     text-transform: uppercase; }
+    .form_number {
+  width: 60px;
+}
 .btn2 {
       text-align: center;
       color:white;
