@@ -15,6 +15,7 @@ foreach($reponse as $val){
 		 	if($val['password']==$password){
 		 	$_SESSION['name'] = $pseudo;
 			$_SESSION['password'] = $password;
+			$_SESSION['role']=$val['role'];
 		 	$connecte = 1;
 		 	break;
 		 
@@ -31,7 +32,7 @@ foreach($reponse as $val){
 
 		 
 
-if ($connecte ==1){header("Location: index.php");
+if ($connecte ==1){header("Location: single_user.php");
 }else{
 	header("Location: connection.php");
 }

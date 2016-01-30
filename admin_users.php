@@ -33,7 +33,7 @@ if ($_SESSION["role"]>2) {
 			echo "mail : ".$val['mail']." euros <br>";
 			echo "adresse : ".$val['adresse']." ".$val['ville']."<br>";
 			?>
-			<a href="#">Lien vers le site de l'entreprise</a><br><br>
+			<a href="<?php $val['lien'] ?>">Lien vers le site de l'entreprise</a><br><br>
 			<a href="modif_entreprise.php?entreprise=<?php echo $val['ID']; ?>">Voir/Modifier l'entreprise</a><br><br>
 			<?php
 			

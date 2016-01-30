@@ -29,18 +29,19 @@
 
 </script>
 
-
+	<h2>Inscription</h2>
+	<p>vous souhaitez ?</p>
 	<div class="inscription">
-		<a href="" onclick="client();return false">Inscription client</a>
+		<a href="" onclick="client();return false">Acheter</a>
 	</div>
 	<div class="inscription">
-		<a href="" onclick="fournisseur();return false">Inscription fournisseur</a>
+		<a href="" onclick="fournisseur();return false">Acheter et/ou Vendre</a>
 	</div>
 
 <div>
 	<div class="form_inscription" id="client">
 		<form method="POST" action="insert_user.php">
-			<h2>Inscription Client</h2>
+					<h2>Acheteur</h2>
 					<div class="form-input">
 						<p>Entreprise/pseudo : <input type="text" name="pseudo" pattern="[a-zA-Z0-9]+" placeholder="Votre nom" required ></p>
 					</div>
@@ -69,7 +70,7 @@
 						<input type="number" name="role" value="4">
 					</div>
 
-			<input class ="btn"type="submit"></br></br>
+			<input class ="btn" type="submit"></br></br>
 			</form>
 
 	</div>
@@ -77,7 +78,7 @@
 
 	<div class="form_inscription" id="fournisseur">
 		<form method="POST" action="insert_user.php">
-			<h2>Inscription entreprise</h2>
+			<h2>Fournisseur</h2>
 					<div class="form-input">
 							
 						<p>entreprise : <input type="text" name="pseudo" pattern="[a-zA-Z0-9]+" placeholder="Votre nom" required ></p>

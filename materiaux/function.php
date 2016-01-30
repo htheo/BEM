@@ -13,8 +13,7 @@ function get_distance_m($lat1, $lng1, $lat2, $lng2) {
   return ($earth_radius * $d);
 }
 
-echo (round(get_distance_m(48.856667, 2.350987, 45.767299, 4.834329) / 1000, 3))
- . ' km';
+
 // affiche 391.613 km
  
 ?>

@@ -6,7 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
-
+	<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+	
 	<meta name="viewport" content="width=device-width" />
 	<link rel="icon" type="image/png" href="images/bem.png" />
 	<meta name="DC.title" content="Bourse Echange et Matériaux">

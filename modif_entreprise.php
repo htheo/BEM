@@ -16,6 +16,12 @@
 		$result = $req->fetchAll(PDO::FETCH_ASSOC);
 
 		foreach($result as $val){
+			?>
+				<form>
+
+				</form>
+
+			<?php
 			echo $val['pseudo']."<br>";
 			echo "mail : ".$val['mail']." euros <br>";
 			echo "adresse : ".$val['adresse']." ".$val['ville']."<br>";
