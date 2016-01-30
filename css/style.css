@@ -6,69 +6,62 @@
 body, div, img, ul {
   margin: 0;
   border: 0;
-  padding: 0; 
-}
+  padding: 0; }
 
 html, body {
   width: 100%;
-  background-color: rgb(255,255,255);
-   }
+  background-color: white; }
+
 /*   texte   */
 a {
   text-decoration: none; }
-h1{
-  margin:0; 
-  font-family: 'Noto Sans', sans-serif;
-}
+
+h1 {
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif; }
+
 p, a {
   font-family: 'Roboto', sans-serif;
-  font-size: 0.9em;
-}
+  font-size: 0.9em; }
+
 h2 {
   margin: 0;
-  font-family: 'Noto Sans', sans-serif;
-}
+  font-family: 'Noto Sans', sans-serif; }
+
 h3 {
   font-size: 16px;
-  margin: 0;
-}
+  margin: 0; }
+
 p {
-  margin: 0;
-}
+  margin: 0; }
+
 .role {
   display: none; }
 
 /*  classe de bases  */
+.marg_top {
+  margin-top: 2%; }
 
-.marg_top{
-  margin-top: 2%;
+.content2 {
+  padding: 1%; }
 
-}
-.content2{
-  
-  padding: 1%;
-}
 .align {
-  display: inline-block;
-}
-.padding_r-l{
+  display: inline-block; }
+
+.padding_r-l {
   padding-right: 1%;
-  padding-left: 1%;
-}
+  padding-left: 1%; }
 
 .content_back {
   width: 100%;
   min-height: 100%;
-  background-image: URL('../images/btp.jpg');
+  background-image: URL("../images/btp.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-    padding-top: 7%;
-    padding-bottom: 7%;
-    text-align: center;
-}
-
-
+  padding-top: 7%;
+  padding-bottom: 7%;
+  text-align: center; }
 
 /* animation */
 /* nav  menu  */
@@ -77,150 +70,139 @@ p {
   padding: 1% 2% 0 0;
   max-width: 100%;
   position: absolute; }
+
 /* nav  menu  */
 .logo {
   width: 5%;
   z-index: 20;
   position: fixed;
   top: 2%;
-  right: 5%;
-}
+  right: 5%; }
+
 .logo img {
-  width: 100%;
-}
+  width: 100%; }
+
 nav {
-  background-color: rgba(0,0,0,0.9);
-
-  top:0;
+  background-color: rgba(0, 0, 0, 0.9);
+  top: 0;
   width: 100%;
-  text-align: center;
-}
-  li,a {
-    display: inline-block;
-    color: white;
+  text-align: center; }
 
-    transition-duration:1s;
-  }
-  li{
-    font-size: 1.2em;
-    padding: 1.5%;
-  }
-    li:hover {
-      background-color: rgba(240,240,240,0.2);
+li, a {
+  display: inline-block;
+  color: white;
+  transition-duration: 1s; }
 
-    }
-    li:hover a{
-      color: orange;
-    }
-  .sousmenu {
-    background-color: rgba(10,10,10,0.9);
+li {
+  font-size: 1.2em;
+  padding: 1.5%; }
 
-  }
-    .sousmenu li {
-      font-size: 1em;
-      padding-top: 0.5%;
-      padding-bottom: 0.5%;
-    }
+li:hover {
+  background-color: rgba(240, 240, 240, 0.2); }
+
+li:hover a {
+  color: orange; }
+
+.sousmenu {
+  background-color: rgba(10, 10, 10, 0.9); }
+
+.sousmenu li {
+  font-size: 1em;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%; }
 
 /*  Inscription  */
 #fournisseur {
   display: none; }
 
-.content, .container, .col1, .col2 {
- }
-
 .slider {
   text-align: center;
   width: 100%;
   height: 300px;
-
   background: url("../images/btp.jpg") grey center center;
   background-size: cover;
   font-family: 'Roboto', sans-serif;
   font-weight: 300; }
-  .slider h1 {
-    padding-top: 9%;
-   
-    color: white; }
-  .slider h2 {
-    color: white; 
-  }
-  .slider h1, .slider h2 {
-    font-weight: 300; }
+
+.slider h1 {
+  padding-top: 9%;
+  color: white; }
+
+.slider h2 {
+  color: white; }
+
+.slider h1, .slider h2 {
+  font-weight: 300; }
 
 h2 {
   font-weight: 300; }
 
 .container {
-
   font-family: 'Roboto', sans-serif;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   font-weight: 300; }
-  .container .col1 {
-    text-align: center;
-    border-right:solid rgba(0,0,0,0.2) 1px;
-    padding-left: 11%;
-    padding-top: 2%;
-    padding-right: 5%;
-    width: 50%;
-    margin-right: 1%;
-   float:left;}
-    .container .col1 h2{
-      margin-bottom: 2%;
-    }
-    .container .col1 article {
-      transition-duration:1s;
-      text-align: center;
-      float: left;
-      width: 23%;
-      padding: 1%;
-       }
-      .container .col1 article:hover {
-        background-color: rgba(0,0,0,0.1);
-      }
-    .container .col1 article img{
-      width: 100%;
-    }
-  .container .col2 {
-  
-     float:left;
-     text-align: center;
-    right: 0;
-    margin-left: 5%;
-    padding-top: 2%;
-    width: 20%;
-    }
-      /*   bouton orange    */
-    .col2 a, .btn {
-      text-align: center;
- 
-      padding: 1%;
-      border: 1px solid rgba(225,45,0,0.2);
-      background-color:rgba(225,45,0,0.6);
-      width: 90%;
-      margin-top: 1%;
-      margin-bottom: 1%;
-      border-radius: 5px;
-      transition-duration:1s;
-    }
-    .col2 a:hover, .btn:hover{
-      background-color:rgba(225,45,0,0.9);
-    }
-  /* formulaire */
 
-  /* form toute la page  */
+.container .col1 {
+  text-align: center;
+  border-right: solid rgba(0, 0, 0, 0.2) 1px;
+  padding-left: 11%;
+  padding-top: 2%;
+  padding-right: 5%;
+  width: 50%;
+  margin-right: 1%;
+  float: left; }
 
+.container .col1 h2 {
+  margin-bottom: 2%; }
+
+.container .col1 article {
+  transition-duration: 1s;
+  text-align: center;
+  float: left;
+  width: 23%;
+  padding: 1%; }
+
+.container .col1 article:hover {
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.container .col1 article img {
+  width: 100%; }
+
+.container .col2 {
+  float: left;
+  text-align: center;
+  right: 0;
+  margin-left: 5%;
+  padding-top: 2%;
+  width: 20%; }
+
+/*   bouton orange    */
+.col2 a, .btn {
+  text-align: center;
+  padding: 1%;
+  border: 1px solid rgba(225, 45, 0, 0.2);
+  background-color: rgba(225, 45, 0, 0.6);
+  width: 90%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-radius: 5px;
+  transition-duration: 1s; }
+
+.col2 a:hover, .btn:hover {
+  background-color: rgba(225, 45, 0, 0.9); }
+
+/* formulaire */
+/* form toute la page  */
 .form {
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   text-align: center;
   margin: auto;
   min-width: 50%;
   padding-top: 1%;
-  padding-bottom: 1%;
+  padding-bottom: 1%; }
 
-}
 .form .form-input {
   display: block;
   margin-right: auto;
@@ -235,42 +217,39 @@ h2 {
   border: none;
   font-size: 0.8em;
   font-weight: 300;
-  background: rgba(255,255,255,0.9);
-}
-  .form_inscription input .form-input p::first-letter {
-    text-transform: uppercase; }
+  background: rgba(255, 255, 255, 0.9); }
+
+.form_inscription input .form-input p::first-letter {
+  text-transform: uppercase; }
+
 .form h2 {
-  color: rgb(20,20,20);
-  margin-bottom: 2%;
-}
+  color: #141414;
+  margin-bottom: 2%; }
+
 .form .btn {
   width: 20%;
-  color: white;
+  color: white; }
 
-}
 .form a {
+  color: #646464;
+  padding-right: 1%;
+  padding-left: 1%; }
 
-   color: rgb(100,100,100);
-   padding-right: 1%;
-   padding-left: 1%;
-
-}
 .form a:hover {
-   color: rgb(20,20,20);
-   padding-right: 1%;
-   padding-left: 1%;
+  color: #141414;
+  padding-right: 1%;
+  padding-left: 1%; }
 
-}
 /* form recherche */
 .recherche {
-  width: 100%;
-}
+  width: 100%; }
+
 .recherche p, .recherche input {
-  display: inline-block;
-}
+  display: inline-block; }
+
 .form_number {
-  width: 60px;
-}
+  width: 60px; }
+
 .input_recherche {
   border-radius: 2px;
   border: none;
@@ -278,29 +257,31 @@ h2 {
   font-weight: 300;
   background: #eeeeee;
   padding: 6px; }
-  .recherche input .form-input p::first-letter {
-    text-transform: uppercase; }
+
+.recherche input .form-input p::first-letter {
+  text-transform: uppercase; }
+
 .btn2 {
-      text-align: center;
-      color:white;
-      padding-top: 1%;
-      padding-bottom: 1%;
-      padding-right: 3%;
-      padding-left: 3%;
-      border: 1px solid rgba(225,45,0,0.1);
-      background-color:rgba(225,45,0,0.6);
-      margin-top: 1%;
-      margin-bottom: 1%;
-      border-radius: 5px;
-      transition-duration:1s;
-    }
-    .btn2:hover{
-      background-color:rgba(225,45,0,0.9);
-    }
-  /* form inscription accueil*/
+  text-align: center;
+  color: white;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-right: 3%;
+  padding-left: 3%;
+  border: 1px solid rgba(225, 45, 0, 0.1);
+  background-color: rgba(225, 45, 0, 0.6);
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-radius: 5px;
+  transition-duration: 1s; }
+
+.btn2:hover {
+  background-color: rgba(225, 45, 0, 0.9); }
+
+/* form inscription accueil*/
 form {
-  margin-top: 2%;
-}
+  margin-top: 2%; }
+
 .form_inscription input {
   display: block;
   margin: 15px 0 20px 15px;
@@ -311,8 +292,9 @@ form {
   font-weight: 300;
   background: #eeeeee;
   padding: 6px; }
-  .form_inscription input .form-input p::first-letter {
-    text-transform: uppercase; }
+
+.form_inscription input .form-input p::first-letter {
+  text-transform: uppercase; }
 
 .footer {
   float: left;
@@ -323,15 +305,16 @@ form {
 .col4 {
   width: 25%;
   float: left; }
-  .col4 h2 {
-    text-align: center; }
+
+.col4 h2 {
+  text-align: center; }
 
 .col4 img {
   max-width: 100%;
   height: 150px; }
 
 /* erreur */
-
 .erreur {
-  color: white;
-}
+  color: white; }
+
+/*# sourceMappingURL=style.css.map */
