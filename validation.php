@@ -14,6 +14,8 @@ foreach($reponse as $val){
 		 if ($val['pseudo']==$pseudo){
 		 	if($val['password']==$password){
 		 	$role=$val['role'];
+		 	$id=$val['ID'];
+		 	$_SESSION['ID'] = $id;
 		 	$_SESSION['name'] = $pseudo;
 			$_SESSION['password'] = $password;
 			$_SESSION['role']=$role;

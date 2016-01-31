@@ -1,17 +1,4 @@
-<html lang="fr">
-<head>
-	<meta charset="utf-8">
 
-	<title>Compte client</title>
-	<meta name="client" >
-	
-	<!-- Libs -->
-	
-
-	<link href="css/style.css" rel="stylesheet" type="text/css">
-
-</head>
-<body>
 <?php include('header.php'); ?>
 
 <?php
@@ -27,7 +14,7 @@ if ($_SESSION["role"]!=3) {
 
 
 ?>
-<div class="container">
+<div class="container marg_top">
 	<div class="col1">
 		<h1>Mon Profil</h1>
 
@@ -35,8 +22,10 @@ if ($_SESSION["role"]!=3) {
 			<?php 
 
 				echo '<div>'.$_SESSION["name"].'</div>';
+				echo '<div>'.$_SESSION["name"].'</div>';
 
 			?>
+			<a href="envoimail.php">Mot de passe oublié ?</a>
 
 
 
