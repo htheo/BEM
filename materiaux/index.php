@@ -1,7 +1,7 @@
 <?php require('header.php'); ?>
 
 <div class="mat-content">
-	<h4 class="mat-head">Liste des matériaux</h4>
+	<h4 class="mat-head title-bar">Liste des matériaux</h4>
 			<a class="mat-list" href="argiles.php">
 				<img src="../images/materiaux/argiles1.jpg" alt="argiles">
 				<div class="mat-title"><p>Argiles</p>

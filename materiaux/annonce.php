@@ -1,6 +1,8 @@
 <?php require('header.php'); ?>
 
-<div class="content">
+<div class="annonce-main">
+	<h4 class="title-bar">L'annonce</h4>
+	<div class="annonce-description">
 
 <?php    //afficher l'annonce en cours
 	if (isset($_GET['annonce'])) // On a le nom et le prénom
@@ -13,11 +15,11 @@
 		$result = $req->fetchAll(PDO::FETCH_ASSOC);
 
 		foreach($result as $val){
-			echo $val['type']."<br>";
-			echo "prix : ".$val['prix']." euros <br>";
-			echo "adresse : ".$val['adresse']." ".$val['ville']."<br>";
+			echo "<h2>".$val['type']."</h2><br><h3>Infomations</h2><hr class='annonce-hr'><br>";
+			echo "Prix : <h4 class='annonce-prix'>".$val['prix']." €</h4><br>";
+			echo "Adresse : <b>".$val['adresse']."</b> à <b>".$val['ville']."</b><br>";
 			?>
-			<a href="#">Reserver</a><br><br>
+			<br/><a type="button" href="#">Reserver</a><br><br>
 
 			<?php
 			
@@ -25,6 +27,10 @@
 			
 		
 	}?>
+	</div>
+	<div class="annonce-image">
+		<img src="../images/materiaux/sable.jpg" class="img-responsive" alt="">
+	</div>
 </div>	
 
 			

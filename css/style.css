@@ -371,4 +371,40 @@ form {
       color: white;
       cursor: pointer; }
 
+/* annonce single */
+.img-responsive {
+  max-width: 100%; }
+
+.title-bar {
+  background-color: rgba(35, 35, 35, 0.75);
+  border-radius: 2px;
+  color: white;
+  margin: 20px 0 20px 0;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 1.3em;
+  letter-spacing: 1px; }
+
+.annonce-main {
+  max-width: 1000px;
+  width: 100%;
+  margin: 20px auto;
+  font-family: 'Roboto', sans-serif; }
+  .annonce-main .annonce-description {
+    width: 50%;
+    float: left; }
+  .annonce-main .annonce-image {
+    width: 50%;
+    float: left; }
+  .annonce-main .annonce-prix {
+    display: inline;
+    color: orange;
+    font-size: 1.5em; }
+  .annonce-main .annonce-hr {
+    color: #f8f8f8;
+    width: 90%;
+    text-align: left;
+    float: left;
+    display: block; }
+
 /*# sourceMappingURL=style.css.map */
