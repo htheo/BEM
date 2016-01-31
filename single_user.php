@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 					include ('config.php');
 
 ?>
@@ -5,22 +6,11 @@
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
+=======
+>>>>>>> 6e7f27f394f0e38f3ca7409b7c43249a358b0b36
 
-	<title>connection</title>
-	<meta name="connection" >
-	
-	<link href="css/style.css" rel="stylesheet" type="text/css">
-	
-
-</head>
-<body>
-
-
-<nav>
-
-				
-			<ul>
 				<?php
+<<<<<<< HEAD
 					if (empty($_SESSION["name"])) {
 						echo '<li><a value="Accueil" href="index.php"><span>Accueil</span></a></li>';
 						echo '<li><a value="Contact" href="materiaux.php">Matériaux</a></li>';
@@ -45,18 +35,12 @@
 	<?php
 	$pseudo =$_SESSION["name"];
 	$sql="SELECT * FROM users WHERE pseudo='".$pseudo."'";
+=======
+					include ('config.php');
 
+>>>>>>> 6e7f27f394f0e38f3ca7409b7c43249a358b0b36
 
-  
-	$req = $db->prepare($sql);
-	$req->execute();
-	  
-	$result = $req->fetchAll(PDO::FETCH_ASSOC);
-
-	foreach($result as $val){
-		 $role=$val['role'];
-	}
-$_SESSION['role']=$role;
+$role=$_SESSION['role'];
 
 if ($role==1){
 	header("Location: rezzgedfgyyhfgjk.php");
@@ -66,12 +50,15 @@ if ($role==2){
 }
 if ($role==3){
 	header("Location: entreprise.php");
-
 }
 
 if ($role==4){
 	header("Location: client.php");
 }
+else{
+	echo $_SESSION['role'];
+}
+
 
 
 
@@ -80,8 +67,3 @@ if ($role==4){
 
 
 ?>
-
-</div>
-
-</body>
-</html>
