@@ -1,6 +1,6 @@
 <?php
 require('header.php');
-include('/materiaux/function.php');?>
+include('materiaux/function.php');?>
 
 
 
