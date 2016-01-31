@@ -35,7 +35,8 @@ include ('header.php');
 					<div class="form-submit">
 						<input class='btn'type="submit" value="Se Connecter">	
 					</div>
-					<a  class="align" href="inscription.php">Pas encore inscrit ?</a><a class="align" href="inscription.php"> mot de passe oublié ?</a>
+					<a  class="align" href="inscription.php">Pas encore inscrit ?</a>
+					<a class="align" href="envoimail.php"> mot de passe oublié ?</a>
 				</form>
 	</div>
 </div>
