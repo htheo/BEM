@@ -178,7 +178,7 @@ include('/materiaux/function.php');?>
 			if(empty($_SESSION['name'])){
 				include ('inscription_field.php');
 			}else{
-				?> <h2>Bonjour à vous <?php echo $_SESSION['name'];echo $_SESSION['role'];  ?></h2>
+				?> <h2>Bonjour à vous <?php echo $_SESSION['name']; ?></h2>
 
 				<a class="marg_top" href="single_user.php">Accéder à votre compte</a>
 				<?php 
