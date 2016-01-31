@@ -339,7 +339,10 @@ form {
     overflow: hidden;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px; }
+  .mat-content img:hover {
+    opacity: 1; }
   .mat-content img {
+    opacity: 0.9;
     display: block;
     height: auto;
     max-width: 100%;
