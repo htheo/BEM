@@ -1,3 +1,9 @@
+
+<?php
+
+include ('header.php');
+?>
+
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
@@ -13,12 +19,7 @@
 
 
 			
-	
-<?php
-	
-	include ('header.php');
-?>
-					
+
 
 <div class='content_back'>
 	

@@ -1,116 +1,139 @@
 <?php require('header.php'); ?>
 
-<div class="content container">
-			<div class="col4"><a href="argiles.php">
+<div class="mat-content">
+	<h4 class="mat-head">Liste des matériaux</h4>
+			<a class="mat-list" href="argiles.php">
 				<img src="../images/materiaux/argiles1.jpg" alt="argiles">
-				<h2>Argiles</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="autre_dechets.php">
+				<div class="mat-title"><p>Argiles</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="autre_dechets.php">
 				<img src="../images/materiaux/calcaire.JPG" alt="calcaires">
-				<h2>Autres déchets</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="autre_organique.php">
+				<div class="mat-title"><p>Autres déchets</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="autre_organique.php">
 				<img src="../images/materiaux/calcaire.JPG" alt="calcaires">
-				<h2>Autres organiques</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="calcaires.php">
-					<img src="../images/materiaux/calcaire.JPG" alt="calcaires">
-					<h2>Calcaires</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="cendre_volante.php">
+				<div class="mat-title"><p>Autres organiques</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="calcaires.php">
 				<img src="../images/materiaux/calcaire.JPG" alt="calcaires">
-				<h2>Cendre volante</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="craies.php">
+				<div class="mat-title">	<p>Calcaires</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="cendre_volante.php">
 				<img src="../images/materiaux/calcaire.JPG" alt="calcaires">
-				<h2>Craies</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="deblais.php">
+				<div class="mat-title"><p>Cendre volante</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="craies.php">
 				<img src="../images/materiaux/calcaire.JPG" alt="calcaires">
-				<h2>Deblais</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="demolition.php">
+				<div class="mat-title"><p>Craies</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="deblais.php">
 				<img src="../images/materiaux/calcaire.JPG" alt="calcaires">
-				<h2>Demolition</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="faible_organique.php">
+				<div class="mat-title"><p>Deblais</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="demolition.php">
 				<img src="../images/materiaux/calcaire.JPG" alt="calcaires">
-				<h2>Faible organique</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="fortement_organique.php">
+				<div class="mat-title"><p>Demolition</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="faible_organique.php">
 				<img src="../images/materiaux/calcaire.JPG" alt="calcaires">
-				<h2>Fortement organique</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="laitiers_fourneaux.php">
+				<div class="mat-title"><p>Faible organique</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="fortement_organique.php">
 				<img src="../images/materiaux/calcaire.JPG" alt="calcaires">
-				<h2>Laitiers fourneaux</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="limons.php">
+				<div class="mat-title"><p>Fortement organique</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="laitiers_fourneaux.php">
+				<img src="../images/materiaux/calcaire.JPG" alt="calcaires">
+				<div class="mat-title"><p>Laitiers fourneaux</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="limons.php">
 				<img src="../images/materiaux/limons1.jpg" alt="limons">
-				<h2>Limons</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="machefers.php">
+				<div class="mat-title"><p>Limons</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="machefers.php">
 				<img src="../images/materiaux/machefers.jpg" alt="machefers">
-				<h2>Machefers</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="marnes.php">
+				<div class="mat-title"><p>Machefers</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="marnes.php">
 				<img src="../images/materiaux/calcaire.JPG" alt="marnes">
-				<h2>Marnes</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="phosphogypse.php">
+				<div class="mat-title"><p>Marnes</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="phosphogypse.php">
 				<img src="../images/materiaux/phsophogypse.jpg" alt="phosphogypse">
-				<h2>Phosphogypse</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="remblais.php">
+				<div class="mat-title"><p>Phosphogypse</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="remblais.php">
 				<img src="../images/materiaux/remblais.jpg" alt="remblais">
-				<h2>Remblais</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="roches_argileuses.php">
+				<div class="mat-title"><p>Remblais</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="roches_argileuses.php">
 				<img src="../images/materiaux/sol_argileux.jpg" alt="roches_argileuses">
-				<h2>Roches Argileuses</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="roches_magmatiques.php">
+				<div class="mat-title"><p>Roches Argileuses</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="roches_magmatiques.php">
 				<img src="../images/materiaux/roche_magmatique.jpg" alt="roches_magmatiques">
-				<h2>Roches Magmatiques</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="roches_salines.php">
+				<div class="mat-title"><p>Roches Magmatiques</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="roches_salines.php">
 				<img src="../images/materiaux/roches_salines_halite.jpg" alt="roches salines">
-				<h2>Roches Salines</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="roches_siliceusess.php">
+				<div class="mat-title"><p>Roches Salines</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="roches_siliceusess.php">
 				<img src="../images/materiaux/calcaire.JPG" alt="silicieuses">
-				<h2>Roches Silicieuses</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="sables.php">
+				<div class="mat-title"><p>Roches Silicieuses</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="sables.php">
 				<img src="../images/materiaux/sable.JPG" alt="sables">
-				<h2>Sables</h2>
-				</a>
-			</div>
-			<div class="col4"><a href="schistes.php">
+				<div class="mat-title"><p>Sables</p>
+				</div>
+			</a>
+
+			<a class="mat-list" href="schistes.php">
 				<img src="../images/materiaux/calcaire.JPG" alt="calcaires">
-				<h2>Calcaires</h2>
-				</a>
-			</div>
+				<div class="mat-title"><p>Calcaires</p>
+				</div>
+			</a>
+
 
 
 </div>

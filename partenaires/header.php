@@ -51,7 +51,6 @@
 
 	<ul  class="menu_principal">
 		<?php
-		require ('../config.php');
 
 
 

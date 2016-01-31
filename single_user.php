@@ -1,3 +1,7 @@
+<?php 					include ('config.php');
+
+?>
+
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
@@ -17,10 +21,6 @@
 				
 			<ul>
 				<?php
-					include ('config.php');
-
-					
-
 					if (empty($_SESSION["name"])) {
 						echo '<li><a value="Accueil" href="index.php"><span>Accueil</span></a></li>';
 						echo '<li><a value="Contact" href="materiaux.php">Matériaux</a></li>';
