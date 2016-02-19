@@ -22,7 +22,7 @@
 	$longitude = $response->results[0]->geometry->location->lng;
 	 	
 	$sql = "INSERT INTO 
-			users 
+			users_BEM 
 		SET 
 			pseudo = :pseudo,
 			password = :password,

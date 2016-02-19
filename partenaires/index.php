@@ -3,7 +3,7 @@
 
 <div class="content">
 	<?php
-		$sql="SELECT * FROM users WHERE role = 3";
+		$sql="SELECT * FROM users_BEM WHERE role = 3";
 		$req = $db->prepare($sql);
 		$req->execute();
 		  

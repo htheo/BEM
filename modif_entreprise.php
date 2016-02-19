@@ -9,7 +9,7 @@
 	if (isset($_GET['entreprise'])) // On a le nom et le prénom
 	{
 		$idencours = $_GET['entreprise'];
-		$sql="SELECT * FROM users WHERE ID = " . $idencours;
+		$sql="SELECT * FROM users_BEM WHERE ID = " . $idencours;
 		$req = $db->prepare($sql);
 		$req->execute();
 		  

@@ -1,17 +1,4 @@
 
-<<<<<<< HEAD
-	<title>Compte client</title>
-	<meta name="client" >
-
-	<!-- Libs -->
-
-
-	<link href="css/style.css" rel="stylesheet" type="text/css">
-
-</head>
-<body>
-=======
->>>>>>> origin
 <?php include('header.php'); ?>
 
 <?php
@@ -34,11 +21,24 @@ if ($_SESSION["role"]!=3) {
 
 			<?php 
 
-				echo '<div>'.$_SESSION["name"].'</div>';
-				echo '<div>'.$_SESSION["name"].'</div>';
+				echo '<p> Votre nom : '.$_SESSION["name"].'</p>';
+				$idencours=$_SESSION['ID'];
+				
+		
+			$sql="SELECT * FROM users_BEM WHERE ID = " . $idencours;
+		$req = $db->prepare($sql);
+		$req->execute();
+		  
+		$result = $req->fetchAll(PDO::FETCH_ASSOC);
 
-			?>
-			<a href="envoimail.php">Mot de passe oublié ?</a>
+		foreach($result as $val){
+			echo "<p>Votre mail : ".$val['mail']."</p>";
+			echo "<p>Votre adresse : ".$val['ville']." ".$val['adresse']."</p>";
+
+			
+		
+	}?>
+			<a class="btn2" href="envoimail.php">Mot de passe oublié ?</a>
 
 
 
@@ -54,8 +54,26 @@ if ($_SESSION["role"]!=3) {
 						
 						<p>Type du matériau : </p>
 						<SELECT name="type" size="1" required>
-							<OPTION value="deblais">Deblais</option>
-							<OPTION value="materiau">Materiau</option>
+							<OPTION value="Argile">Argile</option>
+							<OPTION value="Autres">Autres</option>
+							<OPTION value="Autres_organique">Autres organique</option>
+							<OPTION value="Calcaire">Calcaire</option>
+							<OPTION value="Cendres">Cendres volantes</option>
+							<OPTION value="Craie">Craie</option>
+							<OPTION value="Deblais">Déblais</option>
+							<OPTION value="Demolition">Démolition</option>
+							<OPTION value="Faible_organique">Faible organique</option>
+							<OPTION value="Laitier_fourneau">Laitier fourneau</option>
+							<OPTION value="Limon">Limon</option>
+							<OPTION value="Machefer">Machefer</option>
+							<OPTION value="Marne">Marne</option>
+							<OPTION value="Phosphogypse">Phosphogypse</option>
+							<OPTION value="Remblais">Remblais</option>
+							<OPTION value="Roche_argileuse">Roche argileuse</option>
+							<OPTION value="Roche_magmatique">Roche magmatique</option>
+							<OPTION value="Roche_saline">Roche saline</option>
+							<OPTION value="Sable">Sable</option>
+
 						</SELECT><br>
 
 								

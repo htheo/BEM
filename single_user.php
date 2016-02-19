@@ -44,7 +44,7 @@
 
 	<?php
 	$pseudo =$_SESSION["name"];
-	$sql="SELECT * FROM users WHERE pseudo='".$pseudo."'";
+	$sql="SELECT * FROM users_BEM WHERE pseudo='".$pseudo."'";
 
 
 

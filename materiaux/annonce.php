@@ -17,20 +17,52 @@
 		foreach($result as $val){
 			echo "<h2>".$val['type']."</h2><br><h3>Infomations</h2><hr class='annonce-hr'><br>";
 			echo "Prix : <h4 class='annonce-prix'>".$val['prix']." €</h4><br>";
-			echo "Adresse : <b>".$val['adresse']."</b> à <b>".$val['ville']."</b><br>";
+			echo "Adresse : <b>".$val['adresse']."</b> à <b>".$val['ville']."</b> par <b>".$val['entreprise']."</b><br>";
 			?>
-			<br/><a type="button" href="#">Reserver</a><br><br>
-
+		
+						
 			<?php
+
+			$image=$val['type'];
+			$identreprise=$val['entreprise'];
 			
 
 			
 		
 	}?>
-	</div>
-	<div class="annonce-image">
-		<img src="../images/materiaux/sable.jpg" class="img-responsive" alt="">
-	</div>
+
+<?php    //afficher l'annonce en cours
+
+
+		$sql="SELECT * FROM users_BEM WHERE pseudo = '" . $identreprise ."'";
+		$req = $db->prepare($sql);
+		$req->execute();
+		  
+		$result = $req->fetchAll(PDO::FETCH_ASSOC);
+
+		foreach($result as $val){
+			echo "<br><h3>Entreprise</h2><hr class='annonce-hr'><br>";
+			echo $val['pseudo']."<br>";
+			echo $val['mail']."<br>";
+
+			?>
+			<br/><a class="btn2" type="button" href="#">Reserver</a><br><br>
+			</div>
+			
+			<?php
+
+		
+			
+
+			
+		
+	}?>
+
+</div>
+<div class="annonce-image">
+				<img src="../images/materiaux/<?php echo $image; ?>.jpg" class="img-responsive" alt="">
+			</div>
+	
 </div>	
 
 			

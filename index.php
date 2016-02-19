@@ -11,8 +11,8 @@ include('materiaux/function.php');?>
 
 	<div class="slider">
 		<div class="container">
-		<h1>BEM, Bourse d'échange de matériaux</h1>
-		<h2>Architectes, trouvez facilement vos fournisseurs de matières premières.</h2>
+		<h1>Vous êtes en exces ou en déficit de matériaux ?</h1>
+		<h2>La solution pour l’échange de matériaux de terrassements entres chantiers</h2>
 		</div>
 	</div>
 
@@ -39,15 +39,25 @@ include('materiaux/function.php');?>
 				<p> dans un rayon de </p>
 				<input class="input_recherche form_number" type="number" name="range" value="50" ><p> km</p><br>
 				<SELECT class="input_recherche" name="type" size="1" required>
-					<OPTION value="all">Type de matériaux</option>
-					<OPTION value="Sable">Sable</option>
 					<OPTION value="Argile">Argile</option>
-					<OPTION value="Limon">Limon</option>
-					<OPTION value="Marne">Marne</option>
-					<OPTION value="Calcaire">Calcaire</option>
-					<OPTION value="Craie">Craie</option>
-					<OPTION value="Roche-argileuse">Roche argileuses</option>
-					<OPTION value="Argile">Argile</option>
+							<OPTION value="Autres">Autres</option>
+							<OPTION value="Autres_organique">Autres organique</option>
+							<OPTION value="Calcaire">Calcaire</option>
+							<OPTION value="Cendres">Cendres volantes</option>
+							<OPTION value="Craie">Craie</option>
+							<OPTION value="Deblais">Déblais</option>
+							<OPTION value="Demolition">Démolition</option>
+							<OPTION value="Faible_organique">Faible organique</option>
+							<OPTION value="Laitier_fourneau">Laitier fourneau</option>
+							<OPTION value="Limon">Limon</option>
+							<OPTION value="Machefer">Machefer</option>
+							<OPTION value="Marne">Marne</option>
+							<OPTION value="Phosphogypse">Phosphogypse</option>
+							<OPTION value="Remblais">Remblais</option>
+							<OPTION value="Roche_argileuse">Roche argileuse</option>
+							<OPTION value="Roche_magmatique">Roche magmatique</option>
+							<OPTION value="Roche_saline">Roche saline</option>
+							<OPTION value="Sable">Sable</option>
 				</SELECT>
 				<SELECT class="input_recherche" name="tri" size="1" required>
 					<OPTION value="prix">prix</option>
@@ -61,11 +71,9 @@ include('materiaux/function.php');?>
 				{
 					$tri=$_GET['tri'];
 					$type=$_GET['type'];
-					if ($type="all"){
-						$sql="SELECT * FROM materiaux ORDER BY " . $tri ." LIMIT 8";
-					}else{
+					
 					$sql="SELECT * FROM materiaux WHERE type='". $type ."' ORDER BY " . $tri ." LIMIT 8";
-					}
+					
 				}
 				elseif (isset($_GET['type'])){
 					$type=$_GET['type'];

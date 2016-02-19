@@ -19,7 +19,7 @@ if ($_SESSION["role"]>2) {
 <?php 
 
 
-		$sql="SELECT * FROM users";
+		$sql="SELECT * FROM users_BEM";
 	
 
 	  

@@ -3,7 +3,7 @@ include('header.php');
 
 if(isset($_SESSION['ID'])){
 	$id=$_SESSION['ID'];
-	$reponse = $db->query("SELECT * FROM users WHERE ID='".$id."'");
+	$reponse = $db->query("SELECT * FROM users_BEM WHERE ID='".$id."'");
 	foreach($reponse as $val){
 		 
 		 $mail=$val['mail'];
@@ -31,6 +31,7 @@ $headers = 'From: hinfraytheo@gmail.com' . "\r\n" .
 <br><br><br><br><br>
 		<h1>Envoie de Mail effectué</h1>
 		<p>Un mail avec votre mot de passe a été envoyé à l'adresse <?php echo $mail;?></p>
+		<a href="index.php" class="btn2">Retour Accueil</a>
 	</div>
 <?php
 
@@ -38,7 +39,7 @@ mail($mail,$sujet,$message,$header);
 }elseif(isset($_POST['mail'])){
 
 	$mail=$_POST['mail'];
-	$reponse = $db->query("SELECT * FROM users WHERE ID='".$mail."'");
+	$reponse = $db->query("SELECT * FROM users_BEM WHERE ID='".$mail."'");
 	foreach($reponse as $val){
 		 
 		 $mail=$val['mail'];
@@ -66,6 +67,7 @@ $headers = 'From: hinfraytheo@gmail.com' . "\r\n" .
 <br><br><br><br><br>
 		<h1>Envoie de Mail effectué</h1>
 		<p>Un mail avec votre mot de passe a été envoyé à l'adresse <?php echo $mail;?></p>
+		<a href="index.php">Retour Accueil</a>
 	</div>
 <?php
 
