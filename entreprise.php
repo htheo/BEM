@@ -63,6 +63,7 @@ if ($_SESSION["role"]!=3) {
 							<OPTION value="Deblais">Déblais</option>
 							<OPTION value="Demolition">Démolition</option>
 							<OPTION value="Faible_organique">Faible organique</option>
+							<OPTION value="Fortement_organique">Fortement organique</option>
 							<OPTION value="Laitier_fourneau">Laitier fourneau</option>
 							<OPTION value="Limon">Limon</option>
 							<OPTION value="Machefer">Machefer</option>
@@ -72,6 +73,7 @@ if ($_SESSION["role"]!=3) {
 							<OPTION value="Roche_argileuse">Roche argileuse</option>
 							<OPTION value="Roche_magmatique">Roche magmatique</option>
 							<OPTION value="Roche_saline">Roche saline</option>
+							<OPTION value="Roche_silicieuse">Roche silicieuse</option>
 							<OPTION value="Sable">Sable</option>
 
 						</SELECT><br>

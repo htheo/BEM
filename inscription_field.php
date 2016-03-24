@@ -2,32 +2,8 @@
 	<!-- Libs -->
 	
 
-	<link href="css/style.css" rel="stylesheet" type="text/css">
-	<script language="javascript" type="text/javascript"> /* fonction bascule form fournisseur/client  */
-
-	function fournisseur()
-	   {
-	 
-	 
-	   document.getElementById('fournisseur').style.display="block";
-
-	   document.getElementById('client').style.display="none";
-	    
-	}
-	function client()
-	   {
-	 
-	 
-	   document.getElementById('client').style.display="block";
-
-	   document.getElementById('fournisseur').style.display="none";
-	    
-	}
-
-//commentaire
-
-
-</script>
+	
+	
 
 	<h2>Inscription</h2>
 	<p>vous souhaitez ?</p>

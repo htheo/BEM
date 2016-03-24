@@ -15,7 +15,7 @@ html, body {
 /*   texte   */
 a {
   text-decoration: none;
-  color: white; }
+  color:black;}
 
 h1, h2, h3, h4 {
   margin: 0;
@@ -288,6 +288,30 @@ h2 {
 
 .btn2:hover {
   background-color: rgba(225, 45, 0, 0.9); }
+  /*   swap achat vente */
+
+  .hidden {
+    display: none;
+  }
+  .swap {
+    display: inline-block;
+    padding: 1%;
+    cursor: pointer;
+  }
+  .selection_swap {
+      text-align: center;
+  color: white;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-right: 3%;
+  padding-left: 3%;
+  border: 1px solid rgba(225, 45, 0, 0.1);
+  background-color: rgba(225, 45, 0, 0.6);
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-radius: 5px;
+  transition-duration: 1s; 
+  }
 
 /* form inscription accueil*/
 form {

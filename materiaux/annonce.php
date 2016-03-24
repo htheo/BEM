@@ -15,16 +15,18 @@
 		$result = $req->fetchAll(PDO::FETCH_ASSOC);
 
 		foreach($result as $val){
+			$entreprise=$val['entreprise'];
 			echo "<h2>".$val['type']."</h2><br><h3>Infomations</h2><hr class='annonce-hr'><br>";
 			echo "Prix : <h4 class='annonce-prix'>".$val['prix']." €</h4><br>";
-			echo "Adresse : <b>".$val['adresse']."</b> à <b>".$val['ville']."</b> par <b>".$val['entreprise']."</b><br>";
+
+			echo "Adresse : <b>".$val['adresse']."</b> à <b>".$val['ville']."</b> par <a href='../partenaires/single.php?entreprise=".$entreprise."'><b>".$val['entreprise']."</b></a><br>";
 			?>
 		
 						
 			<?php
 
 			$image=$val['type'];
-			$identreprise=$val['entreprise'];
+			$entreprise=$val['entreprise'];
 			
 
 			
@@ -34,7 +36,7 @@
 <?php    //afficher l'annonce en cours
 
 
-		$sql="SELECT * FROM users_BEM WHERE pseudo = '" . $identreprise ."'";
+		$sql="SELECT * FROM users_BEM WHERE pseudo = '" . $entreprise ."'";
 		$req = $db->prepare($sql);
 		$req->execute();
 		  
@@ -58,7 +60,7 @@
 		
 	}?>
 
-</div>
+
 <div class="annonce-image">
 				<img src="../images/materiaux/<?php echo $image; ?>.jpg" class="img-responsive" alt="">
 			</div>

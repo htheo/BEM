@@ -14,7 +14,7 @@
 			echo "prix : ".$val['mail']." euros <br>";
 			echo "adresse : ".$val['adresse']." ".$val['ville']."<br>";
 			?>
-			<a href="single.php?entreprise=<?php echo $val['ID']; ?>">En Savoir plus</a><br><br>
+			<a href="single.php?entreprise=<?php echo $val['pseudo']; ?>">En Savoir plus</a><br><br>
 
 			<?php
 			

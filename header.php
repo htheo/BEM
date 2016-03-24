@@ -1,9 +1,10 @@
-<?php		require ('config.php');
+<?php		include('config.php');
 ?>
-<html>
+<html lang='fr'>
 <head>
 
 	<title>Bourse Echange et Matériaux</title>
+	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>

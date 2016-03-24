@@ -1,9 +1,10 @@
 <?php 		require ('../config.php');
 ?>
-<html>
+<html lang="fr">
 <head>
 
 	<title>Bourse Echange et Matériaux</title>
+	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
@@ -39,6 +40,7 @@
 	<meta property="og:url" content="www.bem.fr">
 	<meta property="og:site_name" content="Bourse Echange et Matériaux">
 	<meta property="og:description" content="Bourse échange et matériaux (BEM) permets aux entreprises de trouver en ligne des matériaux bon marché proche">
+	
 
 </head>
 

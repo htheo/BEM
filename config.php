@@ -5,7 +5,7 @@
 	$dbname = "archi";
 	$host = "localhost";
 	$user = "root";
-	$pass = "root";
+	$pass = "";
 /*
 	$dbname = "theohinfkzbad";
 	$host = "theohinfkzbad.mysql.db";
