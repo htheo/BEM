@@ -1,5 +1,6 @@
 <?php
-	include('config.php');
+
+	require('header.php');
 	$pseudo		= htmlentities($_POST['pseudo']);
 	$mail		= htmlentities($_POST['mail']);
 	$password	= htmlentities($_POST['password']);
@@ -8,15 +9,27 @@
 	$ville	= htmlentities($_POST['ville']);
 	$role	= htmlentities($_POST['role']);	
 
-	$urlWebServiceGoogle = 'http://maps.google.com/maps/api/geocode/json?address=%s&sensor=false&language=fr';
+	$urlWebServiceGoogle = 'http://maps.google.com/maps/api/geocode/json?address=%s&sensor=false&language=fr&key=AIzaSyD_NJRmaEQFlKuz1CG9WJCLBAzP9dYvT2k';
 	$postalAddress = $adresse.', '.$ville.',  France';
 	 
 	$url = vsprintf($urlWebServiceGoogle, urlencode($postalAddress));
 	$response = json_decode(file_get_contents($url));
 	     
-	if (empty($response->status)) {echo "<div class='probleme'><h2>Impossible de trouver l'adresse renseigné</h2><br><p>veuillez renseigner une nouvelle adresse !</p></div";}
-	if ($response->status != "OK") {echo "<div class='probleme'><h2>Impossible de trouver l'adresse renseigné</h2><br><p>veuillez renseigner une nouvelle adresse !</p></div>";}
-	else {
+	if (empty($response->status)) {
+	?>
+	<div class="content_back erreur">
+<br><br><br><br><br>
+		<h1>L'adresse indiquée est vide ou ou Google Map n'arrive pas à la trouver !</h1>
+		<a href="inscription.php">réessayez de s'inscrire</a>	</div> 
+<?php
+}
+	if ($response->status != "OK") { 
+?>
+	<div class="content_back erreur">
+<br><br><br><br><br>
+		<h1>Google Map n'arrive pas à trouver l'adresse indiquée !</h1>
+		<a href="inscription.php">réessayez de s'inscrire</a>	</div> <?php
+	} else {
 
 	$latitude =  $response->results[0]->geometry->location->lat;
 	$longitude = $response->results[0]->geometry->location->lng;
