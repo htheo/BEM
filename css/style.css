@@ -317,13 +317,13 @@ h2 {
 form {
   margin-top: 2%; }
 
-.form_inscription input {
+.form_inscription input,.form_inscription textarea {
   display: block;
   margin: 15px 0 20px 15px;
   width: 100%;
   border-radius: 2px;
   border: none;
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: 300;
   background: #eeeeee;
   padding: 6px; }

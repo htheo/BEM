@@ -7,7 +7,7 @@
 	<h2>Ses annonces</h2>
 	<h2 id="achat2" class="selection_swap swap">recherche de matériaux</h2><h2 id="besoin2" class="swap">vente de matériaux</h2>
 
-						<div id="besoin">
+				<div id="besoin">
 
 
 							<!-- personne dans le besoin  -->
@@ -15,7 +15,7 @@
 					if (isset($_GET['entreprise'])) // On a le nom et le prénom
 					{
 						$entreprise = $_GET['entreprise'];
-					$sql="SELECT * FROM materiaux WHERE vente='1' & entreprise='".$entreprise."'";
+					$sql="SELECT * FROM materiaux WHERE vente='1' && entreprise='".$entreprise."'";
 					
 						
 					$req = $db->prepare($sql);
@@ -60,13 +60,13 @@
 				
 							
 
-					</div>
+				</div>
 					<div id="vente" class="hidden">
 						<?php
 							
 						
 							
-					$sqll="SELECT * FROM materiaux WHERE vente='0' & entreprise='".$entreprise."' ";
+					$sqll="SELECT * FROM materiaux WHERE vente='0' && entreprise='".$entreprise."' ";
 							
 
 				  
@@ -124,7 +124,7 @@
 
 <?php    //afficher l'entreprise en cours
 
-		$sql="SELECT * FROM users_BEM WHERE pseudo = '" . $entreprise ."'";
+		$sql="SELECT * FROM users_bem WHERE pseudo = '" . $entreprise ."'";
 		$req = $db->prepare($sql);
 		$req->execute();
 		  

@@ -8,7 +8,7 @@ $connecte = 0;
 
 // On récupère tout le contenu de la table 
 
-$reponse = $db->query('SELECT * FROM users_BEM');
+$reponse = $db->query('SELECT * FROM users_bem');
 foreach($reponse as $val){
 		 
 		 if ($val['pseudo']==$pseudo){

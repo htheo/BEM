@@ -2,7 +2,7 @@
 require('header.php');
 include('materiaux/function.php');?>
 
-
+<script src="js/script.js"></script>
 
 
 
@@ -26,12 +26,10 @@ include('materiaux/function.php');?>
 						$adresse=$_SESSION['adresse'];
 						?>
 							<input class="input_recherche" type="text" name="ville" value="<?php echo $ville; ?>">
-							<input class="input_recherche" type="text" name="adresse" value="<?php echo $adresse; ?>">
 						<?php
 					}else{
 						?>
-							<input class="input_recherche" type="text" name="ville" placeholder="Votre ville">
-							<input class="input_recherche" type="text" name="adresse" placeholder="Votre adresse">
+							<input class="input_recherche" id="address" type="text" name="ville" placeholder="Adresse ou vous voulez chercher">
 						<?php
 					}
 				?>
@@ -60,100 +58,100 @@ include('materiaux/function.php');?>
 							<OPTION value="Sable">Sable</option>
 				</SELECT>
 				<SELECT class="input_recherche" name="tri" size="1" required>
-					<OPTION value="prix">prix</option>
-					<OPTION value="ID">temps</option>
+					<OPTION value="ID">date</option>
 				</SELECT>
 				
-				<input class="btn2" type="submit" value="rechercher"></br></br>
+				<p onclick="verif2();">Vérifier</p>
+						
+				
+					<div class="role">
+
+						<input type="number" name="role" value="3">
+
+					
+			
+						<input type="number" id="lat2" step="any" name="lat" value="" hidden>					
+
+						<input type="number" id="long2" step="any" name="long" value="" hidden>
+</div> 
+		
+			<input id="valid2" class="btn2" type="submit" value="Rechercher"></br></br>
 			</form>
-			<h2>Annonce de</h2>
-			<h2 id="achat2" class="selection_swap swap">recherche de matériaux</h2><h2 id="besoin2" class="swap">vente de matériaux</h2>
+			<h2>Vous voulez</h2>
+			<h2 id="achat2" class="selection_swap swap">trouver des matériaux</h2><h2 id="besoin2" class="swap">vendre des matériaux</h2>
 
 						<div id="besoin">
 
 
 							<!-- personne dans le besoin  -->
 						<?php
-							if (isset($_GET['tri'])&&isset($_GET['type'])) // On a le nom et le prénom
-							{
-								$tri=$_GET['tri'];
+							if (isset($_GET['type'])){
 								$type=$_GET['type'];
 								
-								$sql="SELECT * FROM materiaux WHERE type='". $type ."' && vente='1' ORDER BY " . $tri ."";
+									$sql="SELECT * FROM materiaux WHERE type='". $type."' && vente='1' ORDER BY ID DESC";
 								
-							}
-							elseif (isset($_GET['type'])){
-								$type=$_GET['type'];
-								if ($type="all"){
-									$sql="SELECT * FROM materiaux";
-								}else{
-									$sql="SELECT * FROM materiaux WHERE type='". $type."' && vente='1'";
-								}
 								
 
 
-							}
-							elseif (isset($_GET['tri'])){
-								$tri=$_GET['tri'];
-								$sql="SELECT * FROM materiaux WHERE vente='1' ORDER BY " . $tri;
 							}
 							else // Il manque des paramètres, on avertit le visiteur
 							{
-								$tri = 'prix';
-								$sql="SELECT * FROM materiaux WHERE vente='1'  ORDER BY " . $tri;
+								
+								$sql="SELECT * FROM materiaux WHERE vente='1'  ORDER BY ID DESC";
 							}
-							if (isset($_GET['range'])&&isset($_GET['ville'])&&isset($_GET['adresse'])&&$_GET['ville']!="1"&&$_GET['adresse']!="1"){
-								$adresse=$_GET['adresse'];
-								$ville=$_GET['ville'];
-
-								$range=$_GET['range'];
-							
-								
-								$urlWebServiceGoogle = 'http://maps.google.com/maps/api/geocode/json?address=%s&sensor=false&language=fr';
-								$postal2Address = $adresse.', '.$ville.',  France';
-									 
-								$url = vsprintf($urlWebServiceGoogle, urlencode($postal2Address));
-								$response = json_decode(file_get_contents($url));
-								
-									$latitude =  $response->results[0]->geometry->location->lat;
-									$longitude = $response->results[0]->geometry->location->lng;
-									
-								
-
-
-							}
-
-				  
 					$req = $db->prepare($sql);
 					$req->execute();
 					  
 					$result = $req->fetchAll(PDO::FETCH_ASSOC);
+
+				if (isset($_GET['range'])&&isset($_GET['lat'])&&isset($_GET['long'])){
+								$latitude=$_GET['lat'];
+								$longitude=$_GET['long'];
+
+								$range=$_GET['range'];
+							$i=0;
+							foreach($result as $val){
+								if($i<12){
+									if (isset($latitude)){
+
+										$lat=$val['lattitude'];
+										$long=$val['longitude'];
+										$km = round(get_distance_m($latitude, $longitude, $lat, $long) / 1000);
+											if($km<=$range){
+												?><article>
+												<img src="images/materiaux/<?php echo $val['type']; ?>.jpg" alt="<?php echo $val['type']; ?>">
+												<h3><?php echo $val['type']; ?></h3>
+												<p><?php echo $val['soustype']; ?></p>
+
+												<?php 
+												echo (round(get_distance_m($latitude, $longitude, $lat, $long) / 1000)). ' km';
+									 			?>
+									 			<br>
+												<a href="materiaux/annonce.php?annonce=<?php echo $val['ID']; ?>">Voir l'annonce</a><br><br>
+
+												</article>
+												<?php
+												$i++;
+											}
+									}
+								
+								
+							}
+						}
+									
+							
+					
+					
+
+
+
+
+				}else{
+
 					$i=0;
 					foreach($result as $val){
-						if($i<8){
-						if (isset($latitude)){
-
-							$lat=$val['lattitude'];
-							$long=$val['longitude'];
-							$km = round(get_distance_m($latitude, $longitude, $lat, $long) / 1000);
-							if($km<=$range){
-								?><article>
-								<img src="images/materiaux/<?php echo $val['type']; ?>.jpg" alt="<?php echo $val['type']; ?>">
-								<h3><?php echo $val['type']; ?></h3>
-								<p><?php echo $val['soustype']; ?></p>
-
-							<?php 
-								echo (round(get_distance_m($latitude, $longitude, $lat, $long) / 1000)). ' km';
-				 			?>
-				 			<br>
-							<a href="materiaux/annonce.php?annonce=<?php echo $val['ID']; ?>">Voir l'annonce</a><br><br>
-
-							</article>
-						<?php
-								$i++;
-							}
-						}else{
 						?>
+
 							<article>
 								<img src="images/materiaux/<?php echo $val['type']; ?>.jpg" alt="<?php echo $val['type']; ?>">
 								<h3><?php echo $val['type']; ?></h3>
@@ -171,7 +169,7 @@ include('materiaux/function.php');?>
 										<p>pas de ville renseignée</p>
 									<?php
 
-								} $i++;
+								} 
 								?>
 								
 
@@ -181,9 +179,9 @@ include('materiaux/function.php');?>
 						<?php
 
 						}
-						
-					}//fin if
-					}
+						$i++;
+					
+				}
 				?>
 					
 						
@@ -192,87 +190,69 @@ include('materiaux/function.php');?>
 
 					</div>
 					<div id="vente" class="hidden">
+				
+
+							<!-- personne dans le besoin  -->
 						<?php
-							if (isset($_GET['tri'])&&isset($_GET['type'])) // On a le nom et le prénom
-							{
-								$tri=$_GET['tri'];
+							if (isset($_GET['type'])){
 								$type=$_GET['type'];
 								
-								$sql="SELECT * FROM materiaux WHERE type='". $type ."' && vente='0' ORDER BY " . $tri ." LIMIT 8";
+									$sql="SELECT * FROM materiaux WHERE type='". $type."' && vente='0' ORDER BY ID DESC";
 								
-							}
-							elseif (isset($_GET['type'])){
-								$type=$_GET['type'];
-								if ($type="all"){
-									$sql="SELECT * FROM materiaux";
-								}else{
-									$sql="SELECT * FROM materiaux WHERE type='". $type."' && vente='0' LIMIT 8";
-								}
 								
 
 
-							}
-							elseif (isset($_GET['tri'])){
-								$tri=$_GET['tri'];
-								$sql="SELECT * FROM materiaux WHERE vente='0' ORDER BY " . $tri;
 							}
 							else // Il manque des paramètres, on avertit le visiteur
 							{
-								$tri = 'prix';
-								$sql="SELECT * FROM materiaux WHERE vente='0' ORDER BY " . $tri;
+								
+								$sql="SELECT * FROM materiaux WHERE vente='0'  ORDER BY ID DESC";
 							}
-							if (isset($_GET['range'])&&isset($_GET['ville'])&&isset($_GET['adresse'])&&$_GET['ville']!="1"&&$_GET['adresse']!="1"){
-								$adresse=$_GET['adresse'];
-								$ville=$_GET['ville'];
-
-								$range=$_GET['range'];
-							
-								
-								$urlWebServiceGoogle = 'http://maps.google.com/maps/api/geocode/json?address=%s&sensor=false&language=fr';
-								$postal2Address = $adresse.', '.$ville.',  France';
-									 
-								$url = vsprintf($urlWebServiceGoogle, urlencode($postal2Address));
-								$response = json_decode(file_get_contents($url));
-								
-									$latitude =  $response->results[0]->geometry->location->lat;
-									$longitude = $response->results[0]->geometry->location->lng;
-									
-								
-
-
-							}
-
-				  
 					$req = $db->prepare($sql);
 					$req->execute();
 					  
 					$result = $req->fetchAll(PDO::FETCH_ASSOC);
-					$j=0;
-					foreach($result as $val){
-						if($j<8){
-						if (isset($latitude)){
 
-							$lat=$val['lattitude'];
-							$long=$val['longitude'];
-							$km = round(get_distance_m($latitude, $longitude, $lat, $long) / 1000);
-							if($km<=$range){
-								?><article>
-								<img src="images/materiaux/<?php echo $val['type']; ?>.jpg" alt="<?php echo $val['type']; ?>">
-								<h3><?php echo $val['type']; ?></h3>
-								<p><?php echo $val['soustype']; ?></p>
+						if (isset($_GET['range'])&&isset($_GET['lat'])&&isset($_GET['long'])){
+								$latitude=$_GET['lat'];
+								$longitude=$_GET['long'];
 
-							<?php 
-								echo (round(get_distance_m($latitude, $longitude, $lat, $long) / 1000)). ' km';
-				 			?>
-				 			<br>
-							<a href="materiaux/annonce.php?annonce=<?php echo $val['ID']; ?>">Voir l'annonce</a><br><br>
+								$range=$_GET['range'];
+							$i=0;
+							foreach($result as $val){
+								if($i<12){
+									if (isset($latitude)){
 
-							</article>
-						<?php
-							$j++;
+										$lat=$val['lattitude'];
+										$long=$val['longitude'];
+										$km = round(get_distance_m($latitude, $longitude, $lat, $long) / 1000);
+											if($km<=$range){
+												?><article>
+												<img src="images/materiaux/<?php echo $val['type']; ?>.jpg" alt="<?php echo $val['type']; ?>">
+												<h3><?php echo $val['type']; ?></h3>
+												<p><?php echo $val['soustype']; ?></p>
+
+												<?php 
+												echo (round(get_distance_m($latitude, $longitude, $lat, $long) / 1000)). ' km';
+									 			?>
+									 			<br>
+												<a href="materiaux/annonce.php?annonce=<?php echo $val['ID']; ?>">Voir l'annonce</a><br><br>
+
+												</article>
+												<?php
+												$i++;
+											}
+									}
+								
+							
+							}
 						}
-						}else{
+				}else{
+
+					$i=0;
+					foreach($result as $val){
 						?>
+
 							<article>
 								<img src="images/materiaux/<?php echo $val['type']; ?>.jpg" alt="<?php echo $val['type']; ?>">
 								<h3><?php echo $val['type']; ?></h3>
@@ -290,7 +270,7 @@ include('materiaux/function.php');?>
 										<p>pas de ville renseignée</p>
 									<?php
 
-								}
+								} 
 								?>
 								
 
@@ -298,11 +278,10 @@ include('materiaux/function.php');?>
 
 							</article>
 						<?php
-						$j++; 
 
 						}
-					}
-					}
+					$i++;
+				}
 				?>
 					
 						
@@ -325,7 +304,7 @@ include('materiaux/function.php');?>
 					if($_SESSION['role']==3){ 	
 				?>
 				<a href="single_user.php">Ajouter un article</a>
-				<a href="single_user.php">Voir tous vos articles</a>
+				<a href="partenaires/single.php?entreprise=<?php echo $_SESSION['name']; ?>">Voir tous vos articles</a>
 
 			   <?php
 					}

@@ -9,6 +9,10 @@
 	<link href='https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
+	
+
 	
 	<meta name="viewport" content="width=device-width" />
 	<link rel="icon" type="image/png" href="images/bem.png" />
@@ -42,7 +46,6 @@
 	<meta property="og:url" content="www.bem.fr">
 	<meta property="og:site_name" content="Bourse Echange et Matériaux">
 	<meta property="og:description" content="Bourse échange et matériaux (BEM) permets aux entreprises de trouver en ligne des matériaux bon marché proche">
-
 </head>
 
 
@@ -77,13 +80,13 @@
 	<div class="sousmenu">
 
 		<ul>
-			<li><a href="materiaux/sables.php">Sables</a></li>
-			<li><a href="materiaux/argiles.php">Argiles</a></li>
-			<li><a href="materiaux/limons.php">Limons</a></li>
-			<li><a href="materiaux/marnes.php">Marnes</a></li>
-			<li><a href="materiaux/calcaires.php">Calcaires</a></li>
-			<li><a href="materiaux/craies.php">Craies</a></li>
-			<li><a href="materiaux/roches_argileuses.php">Roches argileuses</a></li>
+			<li><a  href="materiaux/materiau.php?type=Sable&name=sable">Sables</a></li>
+			<li><a href="materiaux/materiau.php?type=Argile&name=argile">Argiles</a></li>
+			<li><a href="materiaux/materiau.php?type=Limon&name=limons">Limons</a></li>
+			<li><a href="materiaux/materiau.php?type=Marne&marnes">Marnes</a></li>
+			<li><a  href="materiaux/materiau.php?type=Marne&marnes">Calcaires</a></li>
+			<li><a href="materiaux/materiau.php?type=Craie&name=craies">Craies</a></li>
+			<li><a href="materiaux/materiau.php?type=Roche_argileuse&name=roches%20argileuses">Roches argileuses</a></li>
 			<li><a href="materiaux/">Autres</a></li>
 
 		</ul>

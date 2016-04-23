@@ -1,50 +1,18 @@
-<?php 					include ('config.php');
+<?php 				
+require('header.php');
 
 ?>
 
-<html lang="fr">
-<head>
-	<meta charset="utf-8">
 
-	<title>connection</title>
-	<meta name="connection" >
-
-	<link href="css/style.css" rel="stylesheet" type="text/css">
-
-
-</head>
-<body>
-
-
-<nav>
-
-
-			<ul>
-				<?php
-					if (empty($_SESSION["name"])) {
-						echo '<li><a value="Accueil" href="index.php"><span>Accueil</span></a></li>';
-						echo '<li><a value="Contact" href="materiaux.php">Matériaux</a></li>';
-						echo '<li><a value="Bars" href="partenaires.php">Nos partenaires</a></li>';
-						echo '<li><a  value="Se connecter" href="connection.php"><span>Connexion</span></a></li>';
-						echo '<li><a  value="inscription" href="inscription.php"><span>Inscription</span> </a></li>';
-
-					}else{
-						echo '<li><a value="Accueil" href="index.php">Accueil</a></li>';
-						echo '<li><a value="Contact" href="materiaux.php">Matériaux</a></li>';
-						echo '<li><a value="Bars" href="partenaires.php">Nos partenaires</a></li>';
-						echo '<li><a value="deconnection" href="deconnection.php">Déconnexion</a></li>';
-						echo '<li><a>'.$_SESSION["name"].'</a></li>';
-					}
-				?>
-
-			</ul>
-
-</nav>
 <div class='content'>
+<div class="content_back erreur">
+<br><br><br><br><br>
+		<h1>Problème avec votre compte</h1>
+		<a href="inscription.php">réessayez de s'inscrire</a>	</div> 
 
 	<?php
 	$pseudo =$_SESSION["name"];
-	$sql="SELECT * FROM users_BEM WHERE pseudo='".$pseudo."'";
+	$sql="SELECT * FROM users_bem WHERE pseudo='".$pseudo."'";
 
 
 

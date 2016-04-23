@@ -38,7 +38,7 @@
 				</div>
 			</a>
 
-			<a class="mat-list" href="materiau.php?type=Deblais&name=déblais">
+			<a class="mat-list" href="materiau.php?type=Deblais&name=deblais">
 				<img src="../images/materiaux/calcaire.JPG" alt="calcaires">
 				<div class="mat-title"><p>Deblais</p>
 				</div>

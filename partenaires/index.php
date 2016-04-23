@@ -1,7 +1,7 @@
 <?php require('header.php'); ?>
 
-
-<div class="content">
+<div class="content_back erreur">
+<br><br><br><br><br>
 	<?php
 		$sql="SELECT * FROM users_BEM WHERE role = 3";
 		$req = $db->prepare($sql);

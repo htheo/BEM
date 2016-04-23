@@ -76,14 +76,15 @@
 	<div class="sousmenu">
 
 		<ul>
-			<li><a href="../materiaux/sables.php">Sables</a></li>
-			<li><a href="../materiaux/argiles.php">Argiles</a></li>
-			<li><a href="../materiaux/limons.php">Limons</a></li>
-			<li><a href="../materiaux/marnes.php">Marnes</a></li>
-			<li><a href="../materiaux/calcaires.php">Calcaires</a></li>
-			<li><a href="../materiaux/craies.php">Craies</a></li>
-			<li><a href="../materiaux/roches_argileuses.php">Roches argileuses</a></li>
+			<li><a  href="../materiaux/materiau.php?type=Sable&name=sable">Sables</a></li>
+			<li><a href="../materiaux/materiau.php?type=Argile&name=argile">Argiles</a></li>
+			<li><a href="../materiaux/materiau.php?type=Limon&name=limons">Limons</a></li>
+			<li><a href="../materiaux/materiau.php?type=Marne&marnes">Marnes</a></li>
+			<li><a  href="../materiaux/materiau.php?type=Marne&marnes">Calcaires</a></li>
+			<li><a href="../materiaux/materiau.php?type=Craie&name=craies">Craies</a></li>
+			<li><a href="../materiaux/materiau.php?type=Roche_argileuse&name=roches%20argileuses">Roches argileuses</a></li>
 			<li><a href="../materiaux/">Autres</a></li>
+
 
 		</ul>
 

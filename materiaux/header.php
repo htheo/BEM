@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 
 	<meta name="viewport" content="width=device-width" />
 	<link rel="icon" type="image/png" href="images/BEM.png" />
@@ -76,13 +77,13 @@
 	<div class="sousmenu">
 
 		<ul>
-			<li><a href="sables.php">Sables</a></li>
-			<li><a href="argiles.php">Argiles</a></li>
-			<li><a href="limons.php">Limons</a></li>
-			<li><a href="marnes.php">Marnes</a></li>
-			<li><a href="calcaires.php">Calcaires</a></li>
-			<li><a href="craies.php">Craies</a></li>
-			<li><a href="roches_argileuses.php">Roches argileuses</a></li>
+			<li><a  href="materiau.php?type=Sable&name=sable">Sables</a></li>
+			<li><a href="materiau.php?type=Argile&name=argile">Argiles</a></li>
+			<li><a href="materiau.php?type=Limon&name=limons">Limons</a></li>
+			<li><a href="materiau.php?type=Marne&name=marnes">Marnes</a></li>
+			<li><a  href="materiau.php?type=Calcaire&name=Calcaires">Calcaires</a></li>
+			<li><a href="materiau.php?type=Craie&name=craies">Craies</a></li>
+			<li><a href="materiau.php?type=Roche_argileuse&name=roches%20argileuses">Roches argileuses</a></li>
 			<li><a href="index.php">Autres</a></li>
 
 		</ul>
